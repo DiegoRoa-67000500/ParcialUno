@@ -1,0 +1,136 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #fff;
+}
+
+img {
+	margin: auto;
+	width: 100%;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 20px;
+}
+
+.borde{
+	border: solid 2px #cfbfbf;
+	padding: 20px;
+	text-align: center;
+
+}
+
+.formulario__label_title {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+	align-items: center;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #b1a0a0;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+.formulario__input:focus {
+	border: 3px solid #fff;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn{
+	grid-column: span 3;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn {
+	display: flex;
+	/* justify-content: space-around;     para justificar contenido*/  
+	justify-content: center;
+	gap: 15px;
+	width: 100%;
+	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 35%;
+	background: #b3a4a4;
+	color: #131212;
+	font-weight: bold;
+	border: solid 2px #cfbfbf;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+	align-items: center;
+	/* grid-row-end: 5;
+	grid-row-start: 2; */
+
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 3fr;
+		grid-template-rows: 5;
+	}
+
+	.formulario__grupo-btn {
+		grid-column: 2;
+		align-items: center;
+	}
+
+}
